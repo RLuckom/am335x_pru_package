@@ -123,7 +123,8 @@ static int LOCAL_exampleInit ( unsigned short pruNum )
     pruDataMem_int[0] = 0x00;
     pruDataMem_int[1] = 0x00;
     pruDataMem_int[2] = 0x00;
-    pruDataMem_int[0] = 0x55;
+    pruDataMem_int[0] = 0x5;
+    pruDataMem_int[1] = 0xa;
 
     return(0);
 }

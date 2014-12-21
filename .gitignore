@@ -1,4 +1,5 @@
 *.pyc
+*~
 
 pru_sw/app_loader/interface/debug/
 pru_sw/app_loader/interface/release/

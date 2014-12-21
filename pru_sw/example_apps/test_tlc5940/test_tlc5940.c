@@ -19,7 +19,7 @@
 * Local Macro Declarations                                                   *
 *****************************************************************************/
 
-#define PRU_NUM 	0
+#define PRU_NUM 	1
 #define ADDEND1		0x0010F012u
 #define ADDEND2		0x0000567Au
 
@@ -63,7 +63,7 @@ int main (void)
     unsigned int ret;
     tpruss_intc_initdata pruss_intc_initdata = PRUSS_INTC_INITDATA;
 
-    printf("\nINFO: Starting %s example.\r\n", "test_tlc5940");
+    printf("\nINFO: Starting %s example.\r\n", "test_data_xfer");
     /* Initialize the PRU */
     prussdrv_init ();
 
@@ -120,8 +120,13 @@ static int LOCAL_exampleInit ( unsigned short pruNum )
     pruDataMem_int = (unsigned int*) pruDataMem;
 
     // Flush the values in the PRU data memory locations
-    pruDataMem_int[0] = 1434456064;
-    pruDataMem_int[1] = 16389;
+    pruDataMem_int[0] = 0x04002001;
+    pruDataMem_int[1] = 0x00100080;
+    pruDataMem_int[2] = 0x08004002;
+    pruDataMem_int[3] = 0x00200100;
+    pruDataMem_int[4] = 0x00008004;
+    pruDataMem_int[5] = 0x00000000;
+    pruDataMem_int[6] = 0x00000000;
 
     return(0);
 }

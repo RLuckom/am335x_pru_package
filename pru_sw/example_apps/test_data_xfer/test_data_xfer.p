@@ -19,7 +19,7 @@ TESTDATAXFER:
 
 #endif
     LBCO      r4, CONST_PRUDRAM, 0, 1 //Load 4 bytes from memory location c3(PRU0/1 Local Data)+4 into r4 using constant table
-    LBCO      r3, CONST_PRUDRAM, 4, 1 //Load 4 bytes from memory location c3(PRU0/1 Local Data)+4 into r4 using constant table
+    LBCO      r3, CONST_PRUDRAM, 1, 1 //Load 4 bytes from memory location c3(PRU0/1 Local Data)+4 into r4 using constant table
 
 BLINK:
     MOV r30, r4
